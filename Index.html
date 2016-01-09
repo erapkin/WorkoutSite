@@ -1,0 +1,95 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="aScript.js"></script>
+    <style>
+        .container-fluid {
+            max-width: 1100px;
+        }
+
+        .btn {
+            width: 100%;
+        }
+
+        label {
+            text-align: right;
+        }
+
+        .form-box {
+            position: relative;
+            padding: 45px 15px 15px;
+            border-color: #e5e5e5 #eee #eee;
+            border-style: solid;
+            margin: 0;
+            background-color: #fff;
+            border-color: #ddd;
+            border-width: 1px;
+            border-radius: 4px 4px 0 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+
+        <div class='container-fluid'>
+            <div class='row'>
+                <div class='col-md-12'>
+                    <h1>Generate  A Workout Based on Your Name</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-md-4'>
+                    <div class='form-box'>
+                        <form class='form-horizontal'>
+                            <div class="form-group">
+                                <label for='userName' class='col-sm-2 control-label'>Name</label>
+                                <div class='col-md-10'>
+                                    <input id="userName" type="text" value="" class='form-control'>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for='userWeight' class='col-sm-2 control-label'>Weight</label>
+                                <div class='col-md-10'>
+                                    <input id="userWeight" type="text" class='form-control'>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class='col-sm-2'></div>
+                                <div class='col-md-10'>
+                                    <input type="button" id="create" value='submit' onclick='draw()' class="btn btn-primary">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class='col-md-8'>
+                    <table id="table" class='table table-striped'>
+                        <thead>
+                            <tr>
+                                <th>Letter</th>
+                                <th>Exercise</th>
+                                <th>Mets</th>
+                                <th>Duration</th>
+                                <th>Calories Burned</th>
+                            </tr>
+                        </thead>
+                        <tbody id='tbody'></tbody>
+                    </table>
+                    <h2>Total Calories Burned: <span id="total"></span></h2>
+                </div>
+            </div>
+        </div>
+    <audio autoplay>
+        <source src="guile-theme.mp3" type="audio/mpeg">
+    </audio>
+</body>
+
+</html>
